@@ -1,0 +1,40 @@
+<!-- 引入外部模版 -->
+<import src='../../template/name.wxml' />
+
+<!-- 模版 -->
+<template name='staffName'>
+  <view>
+    FirstName: {{firstName}}, LastName: {{lastName}}
+  </view>
+</template>
+
+
+<view class='container'>
+  <view>{{message}}</view>
+  <view wx:for='{{array}}'>{{item}}</view>
+  <view wx:if='{{view == "WEBVIEW"}}'>WEBVIEW</view>
+  <view wx:if='{{view == "APP"}}'>APP</view>
+  <view wx:if='{{view == "MINA"}}'>MINA</view>
+
+  <template is='staffName' data='{{...staffA}}'></template>
+  <template is='staffName' data='{{...staffB}}'></template>
+  <template is='staffName' data='{{...staffC}}'></template>
+
+  <view bindtap='add'>{{count}}</view>
+
+  <checkbox checked='{{false}}'></checkbox>
+
+  <view hidden='{{flag ? true:false}}'>Hidden</view>
+
+  <view>{{'hello'+name}}</view>
+
+  <view wx:for='{{array2}}'>{{index}}:{{item.message}}</view>
+
+  <!-- 指定index变量 和 item name -->
+  <view wx:for='{{array2}}' wx:for-index='idx' wx:for-item='itemName'>
+     {{idx}}:{{itemName.message}}
+  </view>
+
+  <template is="msgItem" data="{{...msgItems}}"/>
+ 
+</view>

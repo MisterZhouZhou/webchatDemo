@@ -1,0 +1,15 @@
+<view class="container">
+  <view class="about">
+    <text>产品名称：天气预报</text>
+    <text>版本号：{{v}}</text>
+    <text>数据来源：和风天气</text>
+    <text>开发时间：2016年11月</text>
+  </view>
+  <view class="about aboutme">
+    <text class="title">作者：小古哥(Gavin)</text>
+    <text>网站：www.xiaoguge.cn</text>
+    <text class="title">邮箱：gulei125@163.com</text>
+    <text>博客：www.cnblogs.com/gulei</text>
+    <text class="title">GitHub：github.com/gavin125</text>
+  </view>
+</view>

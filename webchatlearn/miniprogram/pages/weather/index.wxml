@@ -1,0 +1,5 @@
+<!--{{}}绑定data中的指定数据并渲染到视图-->
+<view class='title'>{{text}}</view>
+
+<!--wx:for获取数组数据进行循环渲染，item为数组的每项-->
+<view wx:for='{{array}}'>{{item}}</view>

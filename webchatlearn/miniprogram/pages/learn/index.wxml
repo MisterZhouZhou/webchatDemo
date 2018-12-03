@@ -1,0 +1,28 @@
+<!--index.wxml-->
+<view class='container'>
+  <view class='itemStyle'>
+    <view>加载默认值</view>
+    <view>{{text}}</view>
+    <view>加载默认数组</view>
+    <view>{{array[0].msg}}</view>
+  </view>
+ 
+ <view class='itemStyle'>
+    <view bindtap='viewtap'>点我啊</view>
+ </view>
+
+ <view class='itemStyle'>
+    <view>{{text}}</view>
+    <button bindtap='changeText'>Change normal data</button>
+    <view>{{num}}</view>
+    <button bindtap='changeNum'>Change number</button>
+    <view>{{array[0].msg}}</view>
+    <button bindtap='changeItemInArray'>Change Array data</button>
+    <view>{{object.text}}</view>
+    <button bindtap="changeItemInObject"> Change Object data </button>
+    <view>{{newField.text}}</view>
+    <button bindtap="addNewField"> Add new data </button>
+  </view>
+
+
+</view>

@@ -1,0 +1,5 @@
+<!--pages/showpic/showpic.wxml-->
+<view class="container">
+  <image style="height: 100%; width: 100%;" mode="aspectFill" src="{{pic}}" />
+</view>
+

@@ -1,0 +1,26 @@
+<!--pages/my/my.wxml-->
+<view class="container">
+  <scroll-view scroll-y="true" style="height: 100%;">
+    <view class="header-container">
+      <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 获取头像昵称 </button>
+      <block wx:else>
+        <image class="header-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+        <text class="header-nickname">{{userInfo.nickName}}</text>
+      </block>
+    </view>
+    
+    <navigator url="../collection/collection">
+      <view class="item-container" style="margin-top: 30rpx;">
+        <image class="item-icon" src="../../image/ic_collection.png" />
+        <text class="item-label">我的收藏</text>
+      </view>
+    </navigator>
+
+    <navigator url="../submitgank/submitgank?name={{userInfo.nickName}}">
+      <view class="item-container" style="margin-top: 2rpx;">
+        <image class="item-icon" src="../../image/ic_submit.png" />
+        <text class="item-label">提交干货</text>
+      </view>
+    </navigator>
+  </scroll-view>
+</view>

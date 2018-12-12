@@ -1,0 +1,18 @@
+<!--index.wxml-->
+<view class="container">
+  <!-- circular 是否采用衔接滑动 -->
+  <swiper class="index-banner" indicator-dots="{{true}}"
+    autoplay="{{true}}" interval="{{5000}}" duration="{{200}}" circular='true'>
+    <block wx:for="{{imgUrls}}" wx:key="*this">
+      <swiper-item>
+        <image src="{{item}}" mode="aspectFill" class="slide-image"/>
+      </swiper-item>
+    </block>
+  </swiper>
+	<view class="index-menu">
+		<view class="index-menu-item" wx:for="{{indexmenu}}" wx:key="{{item.url}}" id="{{item.url}}" catchtap='changeRoute'>
+			<image src="{{item.icon}}"></image>
+			<text>{{item.text}}</text>
+		</view>
+	</view>
+</view>

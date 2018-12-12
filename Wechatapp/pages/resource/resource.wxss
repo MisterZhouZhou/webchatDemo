@@ -1,0 +1,48 @@
+/* pages/resource/resource.wxss */
+.container-fill{
+	height: 100%;
+	overflow: hidden;
+}
+.scroll-fullpage{
+	height: 100%;
+	transition: all 0.3s;
+}
+.section{
+  /* display: flex; */
+	height: 100%;
+  /* background-image: url(../../images/bg_02.jpg) no-repeat 50% 0% /100% 100%; */
+  background: lightblue;
+  
+  /* background-image: url(../../images/bg_02.jpg) no-repeat 50% 0% /100% 100%; */
+	background: url(https://timgsa.baidu.com/timg?image&quality=80&size=b9999_10000&sec=1517753496248&di=c464b97f6d0b3937307066e600043e14&imgtype=0&src=http%3A%2F%2Fwww.86ps.com%2FimgWeb%2Fpsd%2Fhf_zw%2FZW_033.jpg) no-repeat 50% 0% /100% 100%;
+}
+
+.section-maintitle{
+	display: block;
+	text-align: center;
+	font-size: 50rpx;
+	color: #fff;
+	font-weight: bold;
+	letter-spacing: 10rpx;
+	padding-top: 140rpx;
+}
+.section-subtitle{
+	display: block;
+	text-align: center;
+	font-size: 40rpx;
+	color: #fff;
+	font-weight: bold;
+	letter-spacing: 10rpx;
+}
+.active .section-maintitle,
+.active .section-subtitle{
+	animation: mymove 0.8s;
+}
+@keyframes mymove{
+	from {
+		transform: translateY(-400rpx) scale(0.5) rotateY(90deg);
+	}
+	to {
+		transform: translateY(0) scale(1) rotateY(0);
+	}
+}
